@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/8jotaikohanamizuki/front-edit-button
  * Description: ウィジェットエリアにログイン・編集ボタンを配置
  * Version: 1.0.0
- * Author: Kanako Yokoi
+ * Author: 奏子
  * Author URI: https://hachijotaiko.tokyo
  * License: GPL v2 or later
  * Text Domain: front-edit-button
