@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: フロント編集ボタン
- * Plugin URI: https://github.com/yourusername/front-edit-button
+ * Plugin URI: https://github.com/8jotaikohanamizuki/front-edit-button
  * Description: ウィジェットエリアにログイン・編集ボタンを配置
  * Version: 1.0.0
- * Author: Haru
- * Author URI: https://example.com
+ * Author: Kanako Yokoi
+ * Author URI: https://hachijotaiko.tokyo
  * License: GPL v2 or later
  * Text Domain: front-edit-button
  * Domain Path: /languages
