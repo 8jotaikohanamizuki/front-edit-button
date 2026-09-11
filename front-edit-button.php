@@ -67,18 +67,17 @@ class Front_Edit_Button_Widget extends WP_Widget {
     
     // ボタン描画ロジック
     private function render_button() {
-        $edit_url = get_edit_post_link();
-        
         $output = '<div id="quick-edit-widget">';
         
-        if ( $edit_url ) {
-            // ログイン中（編集権限あり）
+        if ( current_user_can( 'edit_posts' ) ) {
+            // ログイン中 + 編集権限あり → 編集ボタン
+            $edit_url = get_edit_post_link();
             $output .= sprintf(
                 '<a href="%s" class="button" style="display:inline-block; background:#C1432B; color:#fff; padding:0.4rem 0.8rem; border-radius:4px; text-decoration:none; font-size:0.85rem; font-weight:bold; margin:5px 0;">この記事を編集する</a>',
                 esc_url( $edit_url )
             );
-        } else {
-            // 未ログイン → ログイン後に現在ページに戻す
+        } elseif ( ! is_user_logged_in() ) {
+            // 未ログイン → ログインボタン（Google ソーシャルログインへ）
             $current_url = $this->get_current_url();
             $login_url = wp_login_url( $current_url );
             
@@ -87,6 +86,7 @@ class Front_Edit_Button_Widget extends WP_Widget {
                 esc_url( $login_url )
             );
         }
+        // ログイン済み + 権限なし → 何も表示しない
         
         $output .= '</div>';
         
