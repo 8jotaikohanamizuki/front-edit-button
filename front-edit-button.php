@@ -9,6 +9,7 @@
  * License: GPL v2 or later
  * Text Domain: front-edit-button
  * Domain Path: /languages
+ * Update URI: false
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
